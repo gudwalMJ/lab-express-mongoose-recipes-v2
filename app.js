@@ -86,7 +86,7 @@ app.put("/recipes/:id", async (req, res) => {
 });
 //  Iteration 7 - Delete a Single Recipe
 //  DELETE  /recipes/:id route
-app.delete("/recipes:id", async (req, res) => {
+app.delete("/recipes/:id", async (req, res) => {
   try {
     const recipeId = req.params.id;
     const deletedRecipe = await Recipe.findByIdAndDelete(recipeId);
